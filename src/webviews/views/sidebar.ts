@@ -31,7 +31,7 @@ export const useSidebarView = createSingletonComposable(() => {
   const logger = useLogger('Lightning Flow Scanner');
   logger.info('Initializing Webview');
 
-  const { postMessage } = useWebviewView('lfs-sb', html, {
+  const { postMessage } = useWebviewView('corekraft-fl-sb', html, {
     webviewOptions: {
       enableScripts: true,
       enableCommandUris: true,

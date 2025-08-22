@@ -1,5 +1,5 @@
-import * as vscode from "vscode";
-import { FindFlows } from "./FindFlows";
+import * as vscode from 'vscode';
+import { FindFlows } from './FindFlows';
 
 export class SelectFlows {
   private message: string;
@@ -11,8 +11,8 @@ export class SelectFlows {
   public async execute(initialPath: vscode.Uri) {
     vscode.window.showInformationMessage(this.message);
     const specifyFiles: boolean = vscode.workspace
-      .getConfiguration("lightningFlowScanner")
-      .get("SpecifyFiles") as boolean;
+      .getConfiguration('flow-linter-vsx')
+      .get('SpecifyFiles') as boolean;
 
     let selectedFlows = await vscode.window.showOpenDialog({
       canSelectFiles: specifyFiles,
@@ -21,12 +21,12 @@ export class SelectFlows {
       defaultUri: initialPath,
     });
 
-    if(selectedFlows){
+    if (selectedFlows) {
       let uris: string[] = [];
-      for (let selectedFlow of selectedFlows){
+      for (let selectedFlow of selectedFlows) {
         uris.push(selectedFlow.fsPath);
       }
-      if(specifyFiles){
+      if (specifyFiles) {
         return uris;
       } else {
         return FindFlows(uris[0]);

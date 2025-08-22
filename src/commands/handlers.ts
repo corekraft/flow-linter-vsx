@@ -17,13 +17,12 @@ export default class Commands {
 
   get handlers() {
     return Object.entries({
-      'lightningflowscanner.viewDefaulFlowRules': () =>
-        this.viewDefaulFlowRules(),
-      'lightningflowscanner.configRules': () => this.configRules(),
-      'lightningflowscanner.debugView': () => this.debugView(),
-      'lightningflowscanner.scanFlows': () => this.scanFlows(),
-      'lightningflowscanner.fixFlows': () => this.fixFlows(),
-      'lightningflowscanner.calculateFlowTestCoverage': () =>
+      'flow-linter-vsx.viewDefaulFlowRules': () => this.viewDefaulFlowRules(),
+      'flow-linter-vsx.configRules': () => this.configRules(),
+      'flow-linter-vsx.debugView': () => this.debugView(),
+      'flow-linter-vsx.scanFlows': () => this.scanFlows(),
+      'flow-linter-vsx.fixFlows': () => this.fixFlows(),
+      'flow-linter-vsx.calculateFlowTestCoverage': () =>
         this.calculateFlowTestCoverage(),
     });
   }
@@ -70,7 +69,7 @@ export default class Commands {
       await vscode.workspace
         .getConfiguration()
         .update(
-          'lightningFlowScanner.NamingConvention',
+          'flow-linter-vsx.NamingConvention',
           namingConventionString,
           true
         );
@@ -89,7 +88,7 @@ export default class Commands {
       await vscode.workspace
         .getConfiguration()
         .update(
-          'lightningFlowScanner.APIVersion',
+          'flow-linter-vsx.APIVersion',
           apiVersionEvalExpressionString,
           true
         );
@@ -158,9 +157,8 @@ export default class Commands {
       );
       OutputChannel.getInstance().logChannel.trace('create panel');
       let configReset: vscode.WorkspaceConfiguration =
-        vscode.workspace
-          .getConfiguration('lightningFlowScanner')
-          .get('Reset') ?? undefined;
+        vscode.workspace.getConfiguration('flow-linter-vsx').get('Reset') ??
+        undefined;
       OutputChannel.getInstance().logChannel.trace(
         'load vscode stored configurations'
       );

@@ -22,24 +22,24 @@ The `Calculate Flow Coverage` command calculates Flow Test coverage percentages 
 
 <!-- commands -->
 
-| Command                                     | Title                   |
-| ------------------------------------------- | ----------------------- |
-| `flow-linter-vsx.viewDefaultFlowRules`      | Default Flow Rules      |
-| `flow-linter-vsx.scanFlows`                 | Scan Flows              |
-| `flow-linter-vsx.debugView`                 | Debug Flow Scanner View |
-| `flow-linter-vsx.fixFlows`                  | Fix Flows               |
-| `flow-linter-vsx.calculateFlowTestCoverage` | Calculate Flow Coverage |
-| `flow-linter-vsx.configRules`               | Configure Flow Rules    |
+| Command                                     | Title                                |
+| ------------------------------------------- | ------------------------------------ |
+| `flow-linter-vsx.viewDefaultFlowRules`      | Flow Linter: Default Flow Rules      |
+| `flow-linter-vsx.scanFlows`                 | Flow Linter: Lint Flows              |
+| `flow-linter-vsx.debugView`                 | Flow Linter: Debug Flow Scanner View |
+| `flow-linter-vsx.fixFlows`                  | Flow Linter: Fix Flows               |
+| `flow-linter-vsx.calculateFlowTestCoverage` | Flow Linter: Calculate Flow Coverage |
+| `flow-linter-vsx.configRules`               | Flow Linter: Configure Flow Rules    |
 
 <!-- commands -->
 
 <!-- configs -->
 
-| Key                                     | Description                                                                       | Type      | Default                       |
-| --------------------------------------- | --------------------------------------------------------------------------------- | --------- | ----------------------------- |
-| `lightningFlowScanner.SpecifyFiles`     | Specify flow file paths instead of a root directory.                              | `boolean` | `false`                       |
-| `lightningFlowScanner.NamingConvention` | Specify a REGEX expression to use as Flow Naming convention.                      | `string`  | `"[A-Za-z0-9]+_[A-Za-z0-9]+"` |
-| `lightningFlowScanner.APIVersion`       | Specify an expression to validate the API version, i.e. '===50'(use at least 50). | `string`  | `">50"`                       |
-| `lightningFlowScanner.Reset`            | Reset all configurations on every scan                                            | `boolean` | `false`                       |
+| Key                            | Description                                                                       | Type      | Default                       |
+| ------------------------------ | --------------------------------------------------------------------------------- | --------- | ----------------------------- |
+| `flow-linter.SpecifyFiles`     | Specify flow file paths instead of a root directory.                              | `boolean` | `false`                       |
+| `flow-linter.NamingConvention` | Specify a REGEX expression to use as Flow Naming convention.                      | `string`  | `"[A-Za-z0-9]+_[A-Za-z0-9]+"` |
+| `flow-linter.APIVersion`       | Specify an expression to validate the API version, i.e. '===50'(use at least 50). | `string`  | `">50"`                       |
+| `flow-linter.Reset`            | Reset all configurations on every scan                                            | `boolean` | `false`                       |
 
 <!-- configs -->

@@ -17,7 +17,7 @@ export async function activate(context: vscode.ExtensionContext) {
   const sidebarPanel = new Sidebar(context.extensionUri);
   const commands = new Commands(context);
   context.subscriptions.push(
-    vscode.window.registerWebviewViewProvider('lfs-sb', sidebarPanel)
+    vscode.window.registerWebviewViewProvider('corekraft-fl-sb', sidebarPanel)
   );
 
   commands.handlers.forEach(([cmd, fn]) =>

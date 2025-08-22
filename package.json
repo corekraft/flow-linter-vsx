@@ -9,7 +9,7 @@
   },
   "icon": "media/lightningflow.png",
   "description": "A VSCode Extension designed to pinpoint deviations from Industry Best Practices in Salesforce Flows, ensuring standards of business automation excellence.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.99.1"
   },
@@ -22,22 +22,22 @@
     "configuration": {
       "title": "Flow Linter",
       "properties": {
-        "lightningFlowScanner.SpecifyFiles": {
+        "flow-linter.SpecifyFiles": {
           "type": "boolean",
           "default": false,
           "description": "Specify flow file paths instead of a root directory."
         },
-        "lightningFlowScanner.NamingConvention": {
+        "flow-linter.NamingConvention": {
           "type": "string",
           "default": "[A-Za-z0-9]+_[A-Za-z0-9]+",
           "description": "Specify a REGEX expression to use as Flow Naming convention."
         },
-        "lightningFlowScanner.APIVersion": {
+        "flow-linter.APIVersion": {
           "type": "string",
           "default": ">50",
           "description": "Specify an expression to validate the API version, i.e. '===50'(use at least 50)."
         },
-        "lightningFlowScanner.Reset": {
+        "flow-linter.Reset": {
           "type": "boolean",
           "default": false,
           "description": "Reset all configurations on every scan"
@@ -47,46 +47,46 @@
     "commands": [
       {
         "command": "flow-linter-vsx.viewDefaultFlowRules",
-        "title": "Default Flow Rules"
+        "title": "Flow Linter: Default Flow Rules"
       },
       {
         "command": "flow-linter-vsx.scanFlows",
-        "title": "Scan Flows"
+        "title": "Flow Linter: Lint Flows"
       },
       {
         "command": "flow-linter-vsx.debugView",
-        "title": "Debug Flow Scanner View"
+        "title": "Flow Linter: Debug Flow Scanner View"
       },
       {
         "command": "flow-linter-vsx.fixFlows",
-        "title": "Fix Flows"
+        "title": "Flow Linter: Fix Flows"
       },
       {
         "command": "flow-linter-vsx.calculateFlowTestCoverage",
-        "title": "Calculate Flow Coverage"
+        "title": "Flow Linter: Calculate Flow Coverage"
       },
       {
         "command": "flow-linter-vsx.configRules",
-        "title": "Configure Flow Rules"
+        "title": "Flow Linter: Configure Flow Rules"
       }
     ],
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "lfs-sidebar",
-          "title": "Lightning Flow Scanner",
+          "id": "corekraft-fl-sidebar",
+          "title": "Flow Linter",
           "icon": "media/logo.svg"
         }
       ]
     },
     "views": {
-      "lfs-sidebar": [
+      "corekraft-fl-sidebar": [
         {
           "type": "webview",
-          "id": "lfs-sb",
-          "name": "Lightning Flow Scanner",
+          "id": "corekraft-fl-sb",
+          "name": "Flow Linter",
           "icon": "media/logo.svg",
-          "contextualTitle": "Lightning Flow Scanner"
+          "contextualTitle": "Flow Linter"
         }
       ]
     }

@@ -19,25 +19,23 @@ export default class MessageService {
   }
 
   viewRules(query: any) {
-    vscode.commands.executeCommand('lightningflowscanner.viewDefaulFlowRules');
+    vscode.commands.executeCommand('flow-linter-vsx.viewDefaulFlowRules');
   }
 
   scanFlows(query: any) {
-    vscode.commands.executeCommand('lightningflowscanner.scanFlows');
+    vscode.commands.executeCommand('flow-linter-vsx.scanFlows');
   }
 
   fixFlows(query: any) {
-    vscode.commands.executeCommand('lightningflowscanner.fixFlows');
+    vscode.commands.executeCommand('flow-linter-vsx.fixFlows');
   }
 
   runTests(query: any) {
-    vscode.commands.executeCommand(
-      'lightningflowscanner.calculateFlowTestCoverage'
-    );
+    vscode.commands.executeCommand('flow-linter-vsx.calculateFlowTestCoverage');
   }
 
   configRules(query: any) {
-    vscode.commands.executeCommand('lightningflowscanner.configRules');
+    vscode.commands.executeCommand('flow-linter-vsx.configRules');
   }
 
   // Todo implement Cache in Front end components
