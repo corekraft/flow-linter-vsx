@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getRules, getBetaRules } from "lightning-flow-scanner-core";
+    import { getRules, getBetaRules } from "@corekraft/flow-linter-core";
     import RuleCard from "./RuleCard.svelte";
 
     const allRules = getRules();

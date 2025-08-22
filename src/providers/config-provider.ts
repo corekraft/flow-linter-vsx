@@ -3,7 +3,7 @@ import {
   getRules,
   getBetaRules,
   AdvancedRule,
-} from 'lightning-flow-scanner-core';
+} from '@corekraft/flow-linter-core';
 import * as vsce from 'vscode';
 import { Document, parse } from 'yaml';
 

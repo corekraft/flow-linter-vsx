@@ -3,7 +3,7 @@ import { RuleOverview } from '../panels/RuleOverviewPanel';
 import { SelectFlows } from '../libs/SelectFlows';
 import { SaveFlow } from '../libs/SaveFlow';
 import { ScanOverview } from '../panels/ScanOverviewPanel';
-import * as core from 'lightning-flow-scanner-core';
+import * as core from '@corekraft/flow-linter-core';
 import { findFlowCoverage } from '../libs/FindFlowCoverage';
 import { CacheProvider } from '../providers/cache-provider';
 import { testdata } from '../store/testdata';

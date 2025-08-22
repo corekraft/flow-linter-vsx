@@ -2,12 +2,12 @@ import { describe, it, expect, jest } from '@jest/globals';
 import * as cmd from '../../src/commands/handlers';
 
 import * as vsce from 'vscode';
-import * as core from 'lightning-flow-scanner-core';
+import * as core from '@corekraft/flow-linter-core';
 import { CacheProvider } from '../../src/providers/cache-provider';
 import { OutputChannel } from '../../src/providers/outputChannel';
 import * as cp from '../../src/providers/config-provider';
 
-jest.mock('lightning-flow-scanner-core');
+jest.mock('@corekraft/flow-linter-core');
 jest.mock('../../src/providers/cache-provider');
 jest.mock('../../src/providers/outputChannel');
 jest.mock('../../src/providers/config-provider');

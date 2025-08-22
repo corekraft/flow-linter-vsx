@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { Flow } from 'lightning-flow-scanner-core';
+import { Flow } from '@corekraft/flow-linter-core';
 
 export class SaveFlow {
   public async execute(flow: Flow, defaultUri: vscode.Uri) {

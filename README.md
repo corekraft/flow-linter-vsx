@@ -22,14 +22,14 @@ The `Calculate Flow Coverage` command calculates Flow Test coverage percentages 
 
 <!-- commands -->
 
-| Command                                          | Title                   |
-| ------------------------------------------------ | ----------------------- |
-| `lightningflowscanner.viewDefaultFlowRules`      | Default Flow Rules      |
-| `lightningflowscanner.scanFlows`                 | Scan Flows              |
-| `lightningflowscanner.debugView`                 | Debug Flow Scanner View |
-| `lightningflowscanner.fixFlows`                  | Fix Flows               |
-| `lightningflowscanner.calculateFlowTestCoverage` | Calculate Flow Coverage |
-| `lightningflowscanner.configRules`               | Configurate Flow Rules  |
+| Command                                     | Title                   |
+| ------------------------------------------- | ----------------------- |
+| `flow-linter-vsx.viewDefaultFlowRules`      | Default Flow Rules      |
+| `flow-linter-vsx.scanFlows`                 | Scan Flows              |
+| `flow-linter-vsx.debugView`                 | Debug Flow Scanner View |
+| `flow-linter-vsx.fixFlows`                  | Fix Flows               |
+| `flow-linter-vsx.calculateFlowTestCoverage` | Calculate Flow Coverage |
+| `flow-linter-vsx.configRules`               | Configure Flow Rules    |
 
 <!-- commands -->
 

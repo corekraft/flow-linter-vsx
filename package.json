@@ -1,15 +1,15 @@
 {
-  "name": "lightningflowscanner",
-  "displayName": "Lightning Flow Scanner",
-  "publisher": "ForceConfigControl",
+  "name": "flow-linter-vsx",
+  "displayName": "Flow Linter",
+  "publisher": "corekraft",
   "license": "AGPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-vsce"
+    "url": "https://github.com/corekraft/flow-linter-vsx"
   },
   "icon": "media/lightningflow.png",
   "description": "A VSCode Extension designed to pinpoint deviations from Industry Best Practices in Salesforce Flows, ensuring standards of business automation excellence.",
-  "version": "3.63.0",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.99.1"
   },
@@ -20,7 +20,7 @@
   "main": "./dist/extension.js",
   "contributes": {
     "configuration": {
-      "title": "Lightning Flow Scanner",
+      "title": "Flow Linter",
       "properties": {
         "lightningFlowScanner.SpecifyFiles": {
           "type": "boolean",
@@ -46,28 +46,28 @@
     },
     "commands": [
       {
-        "command": "lightningflowscanner.viewDefaultFlowRules",
+        "command": "flow-linter-vsx.viewDefaultFlowRules",
         "title": "Default Flow Rules"
       },
       {
-        "command": "lightningflowscanner.scanFlows",
+        "command": "flow-linter-vsx.scanFlows",
         "title": "Scan Flows"
       },
       {
-        "command": "lightningflowscanner.debugView",
+        "command": "flow-linter-vsx.debugView",
         "title": "Debug Flow Scanner View"
       },
       {
-        "command": "lightningflowscanner.fixFlows",
+        "command": "flow-linter-vsx.fixFlows",
         "title": "Fix Flows"
       },
       {
-        "command": "lightningflowscanner.calculateFlowTestCoverage",
+        "command": "flow-linter-vsx.calculateFlowTestCoverage",
         "title": "Calculate Flow Coverage"
       },
       {
-        "command": "lightningflowscanner.configRules",
-        "title": "Configurate Flow Rules"
+        "command": "flow-linter-vsx.configRules",
+        "title": "Configure Flow Rules"
       }
     ],
     "viewsContainers": {
@@ -182,7 +182,7 @@
   },
   "dependencies": {
     "convert-array-to-csv": "^2.0.0",
-    "lightning-flow-scanner-core": "4.51.0",
+    "@corekraft/flow-linter-core": "1.0.0",
     "tabulator-tables": "^6.3.1",
     "uuid": "^11.0.5",
     "xml2js": "^0.6.2",

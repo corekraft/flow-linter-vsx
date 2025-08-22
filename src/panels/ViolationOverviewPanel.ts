@@ -1,12 +1,12 @@
-import { ScanOverview } from "./ScanOverviewPanel";
-import * as vscode from "vscode";
-import * as uuid from "uuid";
-import { convertArrayToCSV } from "convert-array-to-csv";
-import { ScanResult } from "lightning-flow-scanner-core";
+import { ScanOverview } from './ScanOverviewPanel';
+import * as vscode from 'vscode';
+import * as uuid from 'uuid';
+import { convertArrayToCSV } from 'convert-array-to-csv';
+import { ScanResult } from '@corekraft/flow-linter-core';
 
 export class ViolationOverview {
   public static currentPanel: ViolationOverview | undefined;
-  public static readonly viewType = "report";
+  public static readonly viewType = 'report';
   private readonly _panel: vscode.WebviewPanel;
   private readonly _extensionUri: vscode.Uri;
   private _disposables: vscode.Disposable[] = [];
@@ -21,7 +21,7 @@ export class ViolationOverview {
       ? vscode.window.activeTextEditor.viewColumn
       : undefined;
 
-    let title = tab ? "Results " + tab : "All Results";
+    let title = tab ? 'Results ' + tab : 'All Results';
     if (
       ViolationOverview.currentPanel &&
       ViolationOverview.currentPanel._panel.title === title
@@ -38,8 +38,8 @@ export class ViolationOverview {
       {
         enableScripts: true,
         localResourceRoots: [
-          vscode.Uri.joinPath(extensionUri, "media"),
-          vscode.Uri.joinPath(extensionUri, "out/compiled"),
+          vscode.Uri.joinPath(extensionUri, 'media'),
+          vscode.Uri.joinPath(extensionUri, 'out/compiled'),
         ],
       }
     );
@@ -82,7 +82,7 @@ export class ViolationOverview {
     this._panel.webview.html = this._getHtmlForWebview(webview);
     webview.onDidReceiveMessage(async (data) => {
       switch (data.type) {
-        case "goToFile": {
+        case 'goToFile': {
           if (!data.value) {
             return;
           }
@@ -91,36 +91,36 @@ export class ViolationOverview {
           });
           break;
         }
-        case "overview": {
+        case 'overview': {
           if (!data.value) {
             return;
           }
           ScanOverview.createOrShow(this._extensionUri, data.value);
           break;
         }
-        case "init-view": {
+        case 'init-view': {
           webview.postMessage({
-            type: "init",
+            type: 'init',
             value: scanResults,
           });
           return;
         }
-        case "download": {
+        case 'download': {
           if (!data.value) {
             await vscode.window.showInformationMessage(
-              "No results found. Please make sure to complete a scan before calculating coverage."
+              'No results found. Please make sure to complete a scan before calculating coverage.'
             );
             return;
           }
           let saveResult = await vscode.window.showSaveDialog({
             filters: {
-              csv: [".csv"],
+              csv: ['.csv'],
             },
           });
           const csv = convertArrayToCSV(data.value);
           await vscode.workspace.fs.writeFile(saveResult, Buffer.from(csv));
           await vscode.window.showInformationMessage(
-            "Downloaded file: " + saveResult.fsPath
+            'Downloaded file: ' + saveResult.fsPath
           );
         }
       }
@@ -131,25 +131,25 @@ export class ViolationOverview {
     const scriptUri = webview.asWebviewUri(
       vscode.Uri.joinPath(
         this._extensionUri,
-        "out/compiled",
-        "ViolationOverview.js"
+        'out/compiled',
+        'ViolationOverview.js'
       )
     );
     const cssUri = webview.asWebviewUri(
       vscode.Uri.joinPath(
         this._extensionUri,
-        "out/compiled",
-        "ViolationOverview.css"
+        'out/compiled',
+        'ViolationOverview.css'
       )
     );
     const tabulatorStyles = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "media", "tabulator.css")
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'tabulator.css')
     );
     const stylesResetUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "media", "reset.css")
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'reset.css')
     );
     const stylesMainUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "media", "vscode.css")
+      vscode.Uri.joinPath(this._extensionUri, 'media', 'vscode.css')
     );
     const nonce = uuid.v4();
     return `
