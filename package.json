@@ -9,7 +9,7 @@
   },
   "icon": "media/flow-linter.png",
   "description": "Find and fix problems on your salesforce flow on your IDE",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.99.1"
   },
