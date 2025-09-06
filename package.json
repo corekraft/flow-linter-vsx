@@ -7,9 +7,9 @@
     "type": "git",
     "url": "https://github.com/corekraft/flow-linter-vsx"
   },
-  "icon": "media/lightningflow.png",
+  "icon": "media/flow-linter.png",
   "description": "A VSCode Extension designed to pinpoint deviations from Industry Best Practices in Salesforce Flows, ensuring standards of business automation excellence.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.99.1"
   },

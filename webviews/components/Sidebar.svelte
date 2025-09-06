@@ -36,7 +36,7 @@
 
   <TailwindWrapper>
     <div class="sb">
-    <Banner/>
+    <!-- <Banner/> -->
       <nav aria-label="Sidebar">
         <button class="btn btn-blue" on:click={configRules}>
           Configure Rules
@@ -55,7 +55,7 @@
         </button>
       </nav>
       <div>
-        <p>Support our mission to champion Best Practices by starring ⭐ us on <a href="https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-vsce">GitHub</a></p>
+        <p>Support our mission to champion Best Practices by starring ⭐ us on <a href="https://github.com/corekraft/flow-linter-core">GitHub</a></p>
       </div>
     </div>
 

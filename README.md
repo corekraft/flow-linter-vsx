@@ -1,9 +1,16 @@
- [![Lightning Flow Scanner Banner](media/bannerslim.png)](https://github.com/Lightning-Flow-Scanner)
-__*Pinpoint deviations from Industry Best Practices in Salesforce Flows and ensure standards of business automation excellence.*__
+Find and fix problems on your salesforce flows
 
- [![Flow Overview](media/demo.gif)](https://github.com/Lightning-Flow-Scanner)
+## Installation
 
-**Also available as [Salesforce CLI Plugin](https://github.com/Lightning-Flow-Scanner/lightning-flow-scanner-sfdx)*
+Visual Studio Code
+```
+code --install-extension corekraft.flow-linter-vsx
+```
+
+Cursor
+```
+cursor --install-extension corekraft.flow-linter-vsx
+```
 
 ## Features/Commands
 
