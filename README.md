@@ -1,4 +1,4 @@
-Find and fix problems on your salesforce flows
+Find and fix problems on your salesforce flow on your IDE
 
 ## Installation
 
